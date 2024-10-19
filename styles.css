@@ -1,0 +1,226 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    line-height: 1.6;
+}
+
+/* Logo in the upper left corner */
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 10;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    color: white;
+    margin: 0;
+}
+
+/* Hero Section with Video */
+.hero {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers entire hero section */
+    z-index: -1; /* Places the video behind the text */
+}
+
+.hero-content {
+    z-index: 1;
+    position: relative;
+    color: white; /* Ensure text is visible */
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+/* Full-Screen Image Section Styling */
+.image-section {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+}
+
+/* Overlay with Background */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 0px; /* Add padding for better spacing */
+    border-radius: 10px; /* Optional: round the corners */
+}
+
+.overlay h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1.2em;
+}
+
+/* Floating Navigation without Header */
+.floating-nav {
+    position: fixed; /* Change to fixed */
+    top: 20px;  /* Adjust this to control vertical positioning */
+    right: 20px; /* Adjust this to control horizontal positioning */
+    background-color: rgba(18, 18, 18, 0.8); /* Optional: dark background */
+    padding: 10px; /* Optional: padding around the nav */
+    border-radius: 5px; /* Optional: rounded corners */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    position: relative; /* Relative positioning for dropdown */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white; /* Minimal white text */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px; /* Increased padding for better spacing */
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.nav-item a:hover {
+    color: #00d1ff; /* Change color on hover to cyan */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Set opacity to 0 initially */
+    position: absolute;
+    top: 100%; /* Position the dropdown right below the parent */
+    left: 0;
+    background-color: #333; /* Dark background for dropdown */
+    padding: 10px 0;
+    list-style-type: none;
+    margin: 0;
+    min-width: 160px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure dropdown stays on top */
+    transition: visibility 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #444; /* Darken background on hover */
+    color: #00d1ff; /* Cyan hover effect */
+}
+
+/* Show the dropdown menu when hovering over the parent nav-item */
+.nav-item:hover .dropdown-menu {
+    visibility: visible; /* Show the dropdown */
+    opacity: 1; /* Set opacity to 1 for fade-in effect */
+}
+
+/* Floating Navigation without Header */
+.floating-nav {
+    position: absolute; /* Change to absolute */
+    top: 20px;  /* Adjust this to control vertical positioning */
+    right: 20px; /* Adjust this to control horizontal positioning */
+    background-color: transparent; /* No background */
+    padding: 0; /* Remove padding to make it float */
+    transition: transform 0.3s ease; /* Smooth transition for hiding/showing */
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Buy Me a Coffee Button Styling */
+.buy-coffee-container {
+    position: fixed; /* Fixes the button to the viewport */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensure it appears above other content */
+    text-align: center; /* Center the button */
+}
+
+.buy-coffee-container img {
+    border-radius: 10px; /* Optional: Round the corners of the button */
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.buy-coffee-container img:hover {
+    transform: scale(1.1); /* Scale up the button on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .container {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    input {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .buy-coffee-container {
+        bottom: 10px; /* Adjust distance from bottom */
+        right: 10px; /* Adjust distance from right */
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OH Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Add the logo text in the upper left corner -->
+    <div class="logo">
+        <h1>OH Assistant</h1>
+    </div>
+
+    <!-- Navigation buttons in the upper right corner -->
+    <nav class="floating-nav">
+        <ul class="nav-list">
+            <li class="nav-item dropdown">
+                <a href="#">Follow</a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://www.youtube.com/@Call_Me_Art" target="_blank" rel="noopener noreferrer">Youtube</a></li>
+                    <li><a href="https://www.twitch.tv/callmearttt" target="_blank" rel="noopener noreferrer">Twitch</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#">Tools</a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://pixelsofarya.github.io/OH-Tools-Collection/" target="_blank" rel="noopener noreferrer">Calculators</a></li>
+                   
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#">Useful Links</a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://docs.google.com/spreadsheets/d/1bLqxzNMyZ9rQe3GbzFQ9nlqH9H_98zOCecPe7iV_0YU/htmlview?gid=1409749012#" target="_blank" rel="noopener noreferrer">ModsTable - Doomeris</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1THgN0MdkyMx_umNXxb2ayKoxgpGVWgIKZh0QBmAzI1U/edit?gid=387472346#gid=387472346" target="_blank" rel="noopener noreferrer">Hides (Armour Crafting) - MrKraken</a></li>
+                    <li><a href="https://once-human.fandom.com/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Game Wiki</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="#About Me">About</a></li>
+            <li class="nav-item"><a href="#Story">Story</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <video autoplay muted loop class="background-video">
+            <source src="OH live wallaper with black fade v2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="hero-content">
+            <h2></h2>
+            <p></p>
+        </div>
+    </section>
+
+    <!-- Full-Screen Image Sections -->
+    <section id="Hello Metas" class="image-section" style="background-image: url('page-2.jpg');">
+        <div class="overlay">
+    
+        </div>
+    </section>
+
+    <section id="About Me" class="image-section" style="background-image: url('page-3.jpg');">
+        <div class="overlay">
+          
+        </div>
+    </section>
+
+    <section id="Story" class="image-section" style="background-image: url('page-4.jpg');">
+        <div class="overlay">
+           
+        </div>
+    </section>
+
+<!-- Buy Me a Coffee Button -->
+    <div class="buy-coffee-container">
+        <a href="https://www.buymeacoffee.com/pixelsofarya" target="_blank">
+            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 50px; width: 180px;">
+        </a>
+    </div>
+
+
+  <script>
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('.floating-nav');
+        const scrollY = window.scrollY;
+
+        // If the scroll position is greater than 100, move nav up
+        if (scrollY > 100) {
+            nav.style.transform = 'translateY(-100%)'; // Hide the nav
+        } else {
+            nav.style.transform = 'translateY(0)'; // Show the nav
+        }
+    });
+</script>
+
+</body>
+</html>
